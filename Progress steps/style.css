@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.progress-container::before {
+  content: "";
+  position: absolute;
+  background-color: #383838;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  background-color: #3498db;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.circle {
+  border: 3px solid #383838;
+  background-color: #1f1f1f;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  border: 3px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  color: #fff;
+  font-family: inherit;
+  background-color: #3498db;
+  border: 0;
+  text-align: center;
+  padding: 8px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:disabled {
+  background-color: #383838;
+  cursor: not-allowed;
+}
