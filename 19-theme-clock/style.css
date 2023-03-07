@@ -78,7 +78,7 @@ body {
 
 .needle.minute {
   transform: translate(-50%, -100%) rotate(0deg);
-  height: 100px;
+  height: 80px;
 }
 
 .needle.second {
